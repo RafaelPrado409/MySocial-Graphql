@@ -61,4 +61,16 @@ npm run start
       }
     }
   }
+  
+  query GetByName($name: String!) {
+  name(name: $name) {
+    _id
+    picture
+    age
+    eyeColor
+    name
+    company
+    email
+  }
+}
  ```
