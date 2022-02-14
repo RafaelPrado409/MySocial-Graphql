@@ -80,5 +80,5 @@ npm run start
   curl http://localhost:4000/list
  ```
  ```
- curl http://localhost:4000/list/:id
+  curl http://localhost:4000/list/:id
  ```
