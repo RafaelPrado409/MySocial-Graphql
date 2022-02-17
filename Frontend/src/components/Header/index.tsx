@@ -1,4 +1,5 @@
 import React, { InputHTMLAttributes, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './styles';
 import { Container, Content } from './styles';
 import { FiSearch } from 'react-icons/fi'
@@ -13,7 +14,9 @@ const Header: React.FC = () => {
   return (
     <Container>
       <Content>
-        <p>MySocial</p>
+        <Link to="/">
+          <p>MySocial</p>
+        </Link>
         <input
           // {...name}
           type="text"

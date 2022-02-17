@@ -17,10 +17,11 @@ padding: 0 30px;
     border: 5px;
     outline: none;
     box-shadow: inset 0 0 1px 1px lightgrey;
+    border-radius: 5px;
     :hover {
       cursor: pointer;
       transition: 90ms;
-      border-radius: 40%;
+      border-radius: 50%;
     }
   }
 
@@ -53,32 +54,31 @@ export const Content = styled.div`
   align-items: center;
   margin-left: -10px;
 
+  img {
+    max-width: 150px;
+    margin-top: 40px;
+    border-radius: 20px;
+  }
 
-img {
-  max-width: 150px;
-  margin-top: 40px;
-  border-radius: 20px;
-}
-
-ul {
-  margin-top: -20px;
-  margin-left: -30px;
-  list-style: none;
-  li {
-    padding: 1px 0;
-    margin-top: 1px;
-    margin-right: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    span {
-      color: black;
-      white-space: nowrap;
-      font: 18px 'Roboto', sans-serif;
+  ul {
+    margin-top: 18px;
+    margin-left: -30px;
+    list-style: none;
+    li {
+      padding: 1px 0;
+      margin-top: 30px;
+      margin-right: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      span {
+        color: black;
+        white-space: nowrap;
+        font: 18px 'Roboto', sans-serif;
+      }
     }
   }
-}
 
 @media(max-width: 900px) {
   margin: 0 auto;
@@ -93,7 +93,7 @@ img {
 }
 
 ul {
-  margin-top: 20px;
+  margin-top: 22px;
   margin-left: -30px;
   list-style: none;
   li {
@@ -115,7 +115,7 @@ ul {
 }
 `;
 export const FriendContainer = styled.div`
-  padding: 0 30px;
+  padding: 0 100px;
 
   .rec.rec-arrow {
     border-radius: 0;

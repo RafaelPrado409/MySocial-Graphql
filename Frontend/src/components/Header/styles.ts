@@ -5,6 +5,7 @@ export const Container = styled.div `
   background: blueviolet;
   padding: 0 30px;
   border-radius: 15px;
+  text-decoration: none;
 `;
 
 export const Content = styled.div `
