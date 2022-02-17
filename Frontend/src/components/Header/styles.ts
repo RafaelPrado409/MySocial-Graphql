@@ -24,6 +24,18 @@ export const Content = styled.div `
     border: 1px solid white;
 
   }
+
+  button {
+    background: transparent;
+    border: 0;
+    transition: filter 0.2s;
+    display: flex;
+    justify-content: center;
+    margin-left: -35px;
+    :hover {
+            cursor: pointer;
+        }
+  }
   
   p {
     font-size: 40px;
