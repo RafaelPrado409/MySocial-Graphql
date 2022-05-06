@@ -18,19 +18,19 @@ app.use(express.json());
 
 app.use(routes);
 
-const logger = bunyan.createLogger({
-  name: 'graphqlLog',
-});
+// const logger = bunyan.createLogger({
+//   name: 'graphqlLog',
+// });
 
-app.use(audit({
-  logger: logger,
-  request: {
-    maxBodyLength: 50
-  },
-  response: {
-    maxBodyLength: 50
-  }
-}));
+// app.use(audit({
+//   logger: logger,
+//   request: {
+//     maxBodyLength: 50
+//   },
+//   response: {
+//     maxBodyLength: 50
+//   }
+// }));
 
 async function startApolloServer(typeDefs, resolvers) {
   const httpServer = http.createServer(app);
@@ -43,7 +43,6 @@ async function startApolloServer(typeDefs, resolvers) {
   await server.start();
   server.applyMiddleware({ app });
   await new Promise<void>(resolve => httpServer.listen({ port: 4000 }, resolve));
-
   console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`);
 }
 
@@ -57,5 +56,3 @@ app.use(
 );
 
 startApolloServer(typeDefs, resolvers);
-
-// curl http://localhost:4000/list

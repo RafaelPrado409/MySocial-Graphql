@@ -5,7 +5,11 @@ type Query {
     list: [User]
     user(_id: ID!): User
     name(name: String): User
-  }
+}
+
+type Mutation {
+  createUser(user: CreateUser): SimpleUser
+}
   
 type Friend {
     _id: ID!
@@ -17,7 +21,7 @@ type Friend {
     company: String
     email: String
     phone: String
-  }
+}
 
 type User {
     _id: ID!
@@ -31,5 +35,25 @@ type User {
     phone: String
     friends: [Friend]
     greeting: String
-  }
+}
+
+type SimpleUser {
+    age: Int
+    eyeColor: String
+    name: String
+    company: String
+    email: String
+    phone: String
+    greeting: String
+}
+
+input CreateUser {
+    age: Int
+    eyeColor: String
+    name: String
+    company: String
+    email: String
+    phone: String
+    greeting: String
+}
 `

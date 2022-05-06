@@ -2,7 +2,7 @@ import { Response, Request } from "express";
 import { resolvers } from '../resolvers';
 
 export class ListController {
-  listAll(response: Response) {
+  listAll(request: Request, response: Response) {
     const list = resolvers.Query.list();
     return response.json(list);
   }

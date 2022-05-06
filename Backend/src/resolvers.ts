@@ -25,5 +25,14 @@ export const resolvers = {
       });
       return name.length < 10 ? List.find(user => user.name === result[0]) : List.find(user => user.name === name)
     }
+  },
+
+  Mutation: {
+    createUser: (_, {user}) => {
+      List.push(user);
+      console.log(List);
+      
+      return user;
+    }
   }
 }
